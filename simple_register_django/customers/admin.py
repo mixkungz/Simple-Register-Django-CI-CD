@@ -5,4 +5,6 @@ from .models import Customer
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'email',
+    )

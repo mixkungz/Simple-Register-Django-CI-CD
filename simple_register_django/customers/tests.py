@@ -18,3 +18,8 @@ class CustomerAdminTest(TestCase):
             admin.site._registry[Customer],
             CustomerAdmin
         )
+    def test_customer_admin_should_set_list_display(self):
+        expected = (
+            'email',
+        )
+        self.assertEqual(CustomerAdmin.list_display, expected)
