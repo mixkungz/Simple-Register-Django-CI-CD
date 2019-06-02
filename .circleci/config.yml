@@ -35,6 +35,6 @@ jobs:
           command: |
             . ENV/bin/activate
             cd ansible
-            ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=~/Simple-Register-Django-CI-CD"
+            ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=~/repo"
 
 
