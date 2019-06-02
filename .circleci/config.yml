@@ -15,6 +15,7 @@ jobs:
             python3 -m venv ENV
             . ENV/bin/activate
             pip install -r requirements.txt
+            pip install ansible
       - run:
           name: run unit test
           command: |
@@ -27,7 +28,7 @@ jobs:
             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
             docker push mixkungz/django-simple-register:live
       - run:
-          name: deploy\
+          name: deploy
           command: |
             cd ansible
             ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=~/Desktop/Project/2019/intern/helloworld/Simple-Register-Django-CI-CD"
