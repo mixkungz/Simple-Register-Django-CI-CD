@@ -27,11 +27,14 @@ jobs:
             docker build -t mixkungz/django-simple-register:live .
             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
             docker push mixkungz/django-simple-register:live
+      - add_ssh_keys:
+          fingerprints:
+            - "dc:c3:2c:ad:40:8d:9d:ea:25:d8:54:78:d0:92:56:99"
       - run:
           name: deploy
           command: |
             . ENV/bin/activate
             cd ansible
-            ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=~/Desktop/Project/2019/intern/helloworld/Simple-Register-Django-CI-CD"
+            ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=./Simple-Register-Django-CI-CD"
 
 
