@@ -30,6 +30,7 @@ jobs:
       - run:
           name: deploy
           command: |
+            . ENV/bin/activate
             cd ansible
             ansible-playbook -i hosts -v deploy.yml --extra-vars "project_path=~/Desktop/Project/2019/intern/helloworld/Simple-Register-Django-CI-CD"
 
