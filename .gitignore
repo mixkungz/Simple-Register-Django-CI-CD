@@ -9,3 +9,4 @@ ENV
 terraform/account.json
 terraform/*.tfstate
 terraform/*.tfstate.backup
+terraform/.terraform
