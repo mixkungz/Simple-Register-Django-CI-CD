@@ -1,0 +1,4 @@
+- name: list directory
+  command: "ls"
+- name: show working directory
+  command: "pwd"
