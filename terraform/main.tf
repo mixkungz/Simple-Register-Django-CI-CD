@@ -18,7 +18,7 @@ resource "google_compute_instance" "tf_instance" {
   }
 
   metadata = {
-    sshKeys = "pcr.mixkungz:${file("~/.ssh/id_rsa.pub")}"
+    sshKeys = "pcr.mixkungz:${file("~/.ssh/circleci.pub")}"
   }
 
   network_interface {
