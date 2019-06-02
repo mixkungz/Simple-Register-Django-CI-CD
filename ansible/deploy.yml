@@ -1,0 +1,4 @@
+- name: deploy app
+  hosts: web
+  roles:
+    - deploy
